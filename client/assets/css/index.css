@@ -7,9 +7,11 @@ body {
   --darkColor: rgb(22, 80, 74);
 }
 .image-background {
-  height: 40vh;
+  height: fit-content;
+
   width: 100%;
-  background-image: url(../images/bg.jpg);
+  background-color: var(--middleColor);
+  /* background-image: url(../images/bg.jpg); */
   background-size: cover;
   background-position: top center;
   background-attachment: fixed;
@@ -129,6 +131,7 @@ body {
 .card:hover {
   border: 1px solid var(--middleColor);
 }
+
 .card > div {
   min-height: 50%;
   width: 100%;

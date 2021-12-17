@@ -1,48 +1,12 @@
-let sup1;
-let dem1;
 async function fetchNum() {
-  let response = await fetch("https://tough-cheetah-84.loca.lt/port");
+  let response = await fetch(
+    "https://ur-task.com/msmar/portal/template/almutah-exchange"
+  );
   let data = await response.json();
-
-  let myFunc = (sup) => Number(sup);
-  let supply = Array.from(String(data.supply), myFunc);
-  let demand = Array.from(String(data.demand), myFunc);
-
-  sup1 = supply.slice(0, 3).join("") + "," + supply.slice(3, 6).join("");
-  dem1 = demand.slice(0, 3).join("") + "," + demand.slice(3, 6).join("");
-
-  document.getElementById("sup-coin").setAttribute("akhi", data.supply);
-  document.getElementById("dem-coin").setAttribute("akhi", data.demand);
-
-  animateNumbers();
-  setTimeout(() => {
-    document.getElementById("sup-coin").innerHTML = sup1;
-    document.getElementById("dem-coin").innerHTML = dem1;
-  }, 2000);
+  document.getElementById("sup-coin").innerHTML = data[0].data.Supply;
+  document.getElementById("dem-coin").innerHTML = data[0].data.Demand;
 }
-// fetchNum();
-
-const animateNumbers = () => {
-  const counters = document.querySelectorAll(".ex-num");
-  const speed = 200;
-
-  counters.forEach((counter) => {
-    const animate = () => {
-      const value = +counter.getAttribute("akhi");
-      const data = +counter.innerText;
-
-      const time = value / speed;
-      if (data < value) {
-        counter.innerText = Math.ceil(data + time);
-        setTimeout(animate, 1);
-      } else {
-        counter.innerText = value;
-      }
-    };
-
-    animate();
-  });
-};
+fetchNum();
 
 function setCookie(name, value, days) {
   var expires = "";
