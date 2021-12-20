@@ -21,7 +21,7 @@ body {
   border-radius: 0;
   background-color: var(--lightColor);
   color: white;
-  width: calc(100px + 10vw);
+  width: calc(100px + 1vw);
 }
 .btn-group > .langBtn:nth-of-type(2n) {
   border-bottom-right-radius: 10px;
