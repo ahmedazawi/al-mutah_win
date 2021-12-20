@@ -15,7 +15,7 @@
     <title>شركة المتاح للصرافة</title>
 </head>
 
-<body onload='setCookie("LANG", "AR", 7)'>
+<body onload='setCookie("mutah_LANG", "AR", 7)'>
     <section class="image-background home" id="home">
         <div class="btn-group" role="group" aria-label="Basic example">
             <button type="button" class="btn disabled active langBtn" onclick="switchToArabic()">Arabic</button>
@@ -32,9 +32,10 @@
 
 
     <div class="header sticky-top text-right" dir="rtl">
-        <nav class="navbar  navbar-expand-lg navbar-dark p-1">
+        <nav class="navbar  navbar-expand-lg navbar-dark ">
             <a class="navbar-brand " href="/">
-                <img src="/images/11.png" alt="al-mutah">
+                <img id="logo" src="/images/11.png" alt="al-mutah">
+
             </a>
             <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,6 +54,21 @@
                     </li>
                     <li class="nav-item ">
                         <a class="nav-link contact" href="#contact">اتصل بنا</a>
+                    </li>
+
+                    <li class="nav-item d-flex flex-row align-items-center ">
+                        <a class=" nav-link p-0 m-0" href="https://web.facebook.com/almutah.iq" target="_blank"
+                            rel="noopener noreferrer">
+                            <img class=" nav-contact-img" src="/svg/white_svg/facebook-brands.svg" />
+
+                        </a>
+
+                        <a id="nav-white-whatsapp" class=" nav-link " href="https://wa.me/+9647722072288"
+                            target="_blank" rel="noopener noreferrer">
+                            <img class=" nav-contact-img" src="/svg/white_svg/whatsapp-brands.svg" />
+                        </a>
+
+
                     </li>
 
                 </ul>
@@ -119,7 +135,13 @@
             </ul>
         </div>
 
-        <div class="about-us-img"></div>
+        <div class="about-us-img d-flex justify-content-center">
+            <video controls>
+                <source src="/images/about_video.mp4" type="video/mp4">
+                Your browser does not support HTML video.
+            </video>
+
+        </div>
     </section>
 
     <section class="services" id="service" dir="rtl">
@@ -200,9 +222,9 @@
                 <img src="/svg/whatsapp-brands.svg" width="40" />
                 <span>07722072288</span>
             </a>
-            <a href="mailto:iwqjsqjsi" class=" m-3 d-flex flex-row align-items-center">
+            <a href="mailto:info@almutahco.iq" class=" m-3 d-flex flex-row align-items-center">
                 <img src="/svg/envelope-solid.svg" width="40" />
-                <span>Al-Mutah</span>
+                <span>info@almutahco.iq</span>
             </a>
         </div>
 

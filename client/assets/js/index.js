@@ -29,12 +29,11 @@ function getCookie(name) {
 }
 
 const switchToEnglish = () => {
-  setCookie("LANG", "EN", 7);
-  // window.location.href = "/";
+  setCookie("mutah_LANG", "EN", 7);
   window.location.reload();
 };
 const switchToArabic = () => {
-  setCookie("LANG", "AR", 7);
+  setCookie("mutah_LANG", "AR", 7);
   window.location.reload();
 };
 

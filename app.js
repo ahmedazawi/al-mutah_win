@@ -10,10 +10,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "client", "assets")));
 
 app.get("/", (req, res, next) => {
-  if (req.cookies.LANG === "AR") {
+  if (req.cookies.mutah_LANG === "AR") {
     res.sendFile(path.join(__dirname, "client", "views", "index-ar.html"));
-  } else {
+  } else if (req.cookies.mutah_LANG === "EN") {
     res.sendFile(path.join(__dirname, "client", "views", "index-en.html"));
+  } else {
+    res.sendFile(path.join(__dirname, "client", "views", "index-ar.html"));
   }
 });
 app.listen(3000);

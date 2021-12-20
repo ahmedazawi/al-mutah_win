@@ -42,23 +42,50 @@ body {
 .navbar-brand {
   margin: 0 40px;
 }
-.navbar-brand > img {
+.navbar-brand > #logo {
   width: 200px;
 }
+
 .navbar-toggler {
   margin: 0 20px;
 }
 
+.navbar-nav {
+  /* ul */
+  align-items: center;
+}
 .nav-link {
   font-size: 20px;
   margin: 0 20px;
+  /* transition: border 1s ease; */
+
   /* border-bottom: 1px solid transparent; */
 }
-/* .nav-link.active {
-  border-bottom: 1px solid white;
-  transition: all 0.3s ease-in-out;
+.nav-link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width 0.3s;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* .nav-contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
 } */
-/* content */
+.nav-contact-img {
+  width: 30px;
+}
+
+/* ----- content ------ */
 
 .exchange-container {
   height: 300px;
@@ -68,7 +95,7 @@ body {
   flex-direction: row;
   border-radius: 10px;
   overflow: hidden;
-  margin: 80px !important;
+  margin: 50px !important;
 }
 #ex-quarter {
   background-color: var(--lightColor);
@@ -104,13 +131,16 @@ body {
   padding: 20px;
 }
 .about-us-img {
-  background-image: url(../images/1.jpeg);
-  background-position: center;
-  background-size: cover;
-  border-radius: 10px;
-  height: 280px;
+  /* background-image: url(../images/1.jpeg); */
+  /* background-position: center; */
+  /* background-size: cover; */
+  height: fit-content;
+  overflow: hidden;
 }
-
+.about-us-img > video {
+  width: 80%;
+  border-radius: 10px;
+}
 .services {
   padding: 50px;
 }
@@ -181,7 +211,7 @@ body {
   .nav-link {
     margin: 0;
   }
-  .nav-link.en {
+  .en-nav {
     margin-left: 40px;
   }
   .navbar-brand {
@@ -189,6 +219,14 @@ body {
   }
   .card {
     margin-top: 50px;
+  }
+  .navbar-nav {
+    /* ul */
+    align-items: flex-start;
+  }
+
+  #nav-white-whatsapp {
+    margin: 0 30px;
   }
 }
 
@@ -199,9 +237,17 @@ body {
   .navbar-brand {
     margin: 0 15px;
   }
-
+  .about-us {
+    padding: 30px;
+  }
+  .contact-us {
+    padding: 30px;
+  }
+  .services {
+    padding: 30px;
+  }
   .exchange-container {
-    margin: 50px !important;
+    margin: 30px !important;
   }
   .about-us-description {
     margin: 0;
@@ -209,12 +255,27 @@ body {
   .about-us-description > ul > li {
     padding: 20px 0;
   }
+  .about-us-img > video {
+    width: 100%;
+  }
   .footer {
     margin-top: 0;
   }
 }
 @media only screen and (max-width: 400px) {
+  .navbar-brand > #logo {
+    width: 150px;
+  }
   .exchange-container {
     margin: 20px !important;
+  }
+  .about-us {
+    padding: 20px;
+  }
+  .services {
+    padding: 20px;
+  }
+  .contact-us {
+    padding: 20px;
   }
 }
